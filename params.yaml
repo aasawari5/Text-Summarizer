@@ -1,1 +1,11 @@
-key: value
+TrainingArguments:        
+    num_train_epochs: 1                     # number of training epochs
+    warmup_steps: 500                       # number of warmup steps for learning rate scheduler
+    per_device_train_batch_size: 1          # batch size for training
+    weight_decay: 0.01                      # strength of weight decay
+    logging_steps: 10                       # log & save checkpoints every 10 steps
+    evaluation_strategy: steps              # evaluate every 'eval_steps'
+    eval_steps: 500                         # number of steps between evaluations
+    save_steps: int(1e6)                    # save checkpoint every 1 million steps (practically disabled)
+    gradient_accumulation_steps: 16  
+
